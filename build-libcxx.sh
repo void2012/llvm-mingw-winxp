@@ -108,7 +108,7 @@ for arch in $ARCHS; do
     -DLIBCXXABI_ENABLE_SHARED=OFF \
     -DLIBCXXABI_LIBDIR_SUFFIX="" \
     -DCMAKE_C_FLAGS_INIT="$CFGUARD_CFLAGS" \
-    -DCMAKE_CXX_FLAGS_INIT="$CFGUARD_CFLAGS -D_LIBCPP_VERBOSE_ABORT="(decltype(::std::__use(__VA_ARGS__))(), __builtin_abort())"" \
+    -DCMAKE_CXX_FLAGS_INIT="$CFGUARD_CFLAGS" \
         ..
 
     cmake --build . ${CORES:+-j${CORES}}
